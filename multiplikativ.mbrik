@@ -1,0 +1,9 @@
+\prerequisite{zahlentheoretische_funktionen}
+\begin{definition}
+    Eine zahlentheoretische Funktion $a$ heißt \emph{multiplikativ}, $a\in\MM$, falls f\"ur alle $m,n\geq 1$ mit $(m,n)=1$, $a(m\cdot n)=a(m)\cdot a(n)$ gilt und $a(0)=1$ ist.\newline
+    Eine zahlentheoretische Funktion $a$ heißt \emph{vollst\"andig} (oder \emph{stark}) \emph{multiplikativ}, $a\in\VM$, falls f\"ur alle $m,n\geq 1$ $a(m\cdot n)=a(m)\cdot a(n)$ gilt und $a(0)=1$ ist.
+\end{definition}
+\begin{remark}
+    Multiplikative Funktionen $a$ sind duch die Werte $a(p^k), p\in\PP, k\geq 1$ wohlbestimmt.
+\end{remark}
+

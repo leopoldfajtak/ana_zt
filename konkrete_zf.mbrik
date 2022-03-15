@@ -1,0 +1,123 @@
+\prerequisite{zahlentheoretische_funktionen}
+\begin{example}
+Wichtige konkrete zahlentheoretische Funktionen sind:
+
+\begin{enumerate}
+\item 
+\begin{align*}
+I(n)=S_{n1}=\left\{
+    \begin{array}{ll}
+        1 &n=1\\
+        0 &n>1
+    \end{array}\right. \in\VM &&& 
+    \sum_{n=1}^\infty\frac{I(n)}{n^s}=1
+\end{align*}
+
+\item 
+\begin{align*}
+J(n):= 1\text{ f\"ur } n\geq 1\in\VM&&& 
+    \sum_{n=1}^\infty\frac{J(n)}{n^s}=\sum_{n=1}^\infty\frac{1}{n^s}=:\zeta(s)
+\end{align*}
+ist die Riemannsche Zetafunktion
+\item 
+\begin{align*}
+N_\alpha(n):=n^\alpha&&& 
+    \sum_{n=1}^\infty\frac{N_\alpha(n)}{n^s}=\sum_{n=1}^\infty\frac{1}{n^{s-\alpha}}=\zeta(s-\alpha)
+\end{align*}
+Weiters ist $J=N_0$.
+\item 
+\begin{align*}
+ d(n):=\sum_{d|n}1 &&& d=J*J\in\MM &&& \sum_{n=1}^\infty\frac{d(n)}{n^s}=\sum_{n=1}^\infty\sum_{d|n}\frac{1}{n^s}=\zeta(s)^2
+\end{align*}
+Die Anzahl der Teiler von $n$
+
+\item 
+\begin{align*}
+\sigma(n)=\sum_{d|n}d && \sigma = N_1*J\in\MM &&& \sum_{n=1}^\infty\frac{\sigma(n)}{n^s}=\zeta(s)\zeta(s-1)
+\end{align*}
+Die Summe aller Teiler von $n$
+\item 
+\begin{align*}
+\sigma_\alpha(n)=\sum_{d|n}d^\alpha &&& 
+    \sigma_\alpha=N_\alpha*J\in\MM &&&
+    \sum_{n=1}^\infty\frac{\sigma_\alpha(n)}{n^s}=\zeta(s)\zeta(s-\alpha)
+\end{align*}
+
+\item 
+\begin{align*}
+\mu(n)=\left\{
+    \begin{array}{ll}
+        1 &n=1\\
+        (-1)^k & n=p_1\dots p_k\text{ und alle }p_1,\dots,p_k\text{ verschieden}\\
+        0 &\text{sonst}
+    \end{array}\right.\in\MM \\
+    \mu*J=I\text{, daher }\sum_{d|n}\mu(d)=I(n)\text{ und }\mu=\inv{J}\in\MM &&& \sum_{n=1}^\infty\frac{\mu(n)}{n^s}=\frac{1}{\zeta(s)}
+\end{align*}
+Die M\"obiussche My-Funktion. 
+
+\item 
+\begin{align*}
+\varphi(n)=\#\set{k\mid 1\leq k\leq n, (k,n)=1}
+\end{align*}
+die Eulersche Phi-Funktion
+
+Es gilt $\varphi*J=N_1$, oder anders geschrieben $\sum_{d|n}\varphi(d)=n$:\\
+Betrachte
+
+\begin{tabular}{ll}
+$\frac{1}{n},\frac{2}{n},\dots,\frac{n}{n}$ & $n$ Zahlen\\
+\midrule
+k\"urzen.\\
+Nenner = $n$ & $\varphi(n)$ Zahlen\\
+Nenner = $\frac{n}{d}$, $d|n$ & $\varphi(\frac{n}{d})$ Zahlen (Da $\#\set{1\leq k\leq n\mid (n,k)=d} =\#\set{1\leq l\leq\frac{n}{d}\mid (\frac{n}{d},l)=1} = \varphi(\frac{n}{d})$)
+\end{tabular}
+
+Also ist $\sum_{d|n}\varphi(\frac{n}{d})=n$.
+
+Es folgt nun direkt 
+\begin{align*}
+\varphi=\mu*N_1\in\MM, &&& \sum_{n=1}^\infty\frac{\varphi(n)}{n^s}=\frac{\zeta(s-1)}{\zeta(s)}.
+\end{align*} und
+$\varphi(n)=\sum_{d|n}d\cdot\mu(\frac{n}{d})=\sum_{d|n}\frac{n}{d}\mu(d) = n\sum_{d|n}\frac{\mu(d)}{d} = n\cdot\prod_{\substack{p\in\PP \\ p|n}}(1-\frac{1}{p})$
+
+\item 
+\begin{align*}
+\lambda(n)=\left\{
+    \begin{array}{ll}
+        1 &n=1\\
+        (-1)^{k_1+\dots+k_l} &n=p_1^{k_1}\dots p_l^{k_l}
+    \end{array}\right.\in\VM
+\end{align*}
+Die Liouvillesche Lambda-Funktion. Es ist
+$\inv{\lambda}(n)=\lambda(n)\cdot\mu(n)=\mu(n)^2=|\mu(n)|$
+
+und $(\lambda*J)(p^k)=\sum_{d|p^k}\lambda(d)=1+\sum_{l=1}^k(-1)^l=(l+1)(2)$.
+
+Durch die Multiplikativit\"at von $(\lambda*J)$ folgt
+\begin{align*}
+(\lambda*J)(n)=\left\{\begin{array}{ll}
+    1 & n=m^2\\
+    0 & \text{sonst}
+\end{array}\right.
+&&&\sum_{n=0}^\infty\frac{\lambda(n)}{n^s}\zeta(s)=\sum_{m=0}^\infty\frac{1}{(m^2)^s}=\zeta(2s)
+\end{align*}
+
+\item 
+\begin{align*}
+\Lambda(n)=\left\{
+    \begin{array}{ll}
+        \log p &n=p^k, k>0\\
+        0 &\text{sonst}
+    \end{array}\right. 
+\end{align*}
+Die Von-Mangoldtsche Lambda-Funktion
+
+Es ist $(\lambda*J)(p_1^{k_1}\dots p_l^{k_l})=\sum_{i=1}^l\sum_{j=1}^{k_i}\log p_i=\sum_{j=1}^l\log p_i^{k_i}=\log(p_1^{k_1}\dots p_l^{k_l})$, also $(\lambda*J)=\log$,
+woraus 
+    \[
+    \sum_{n=1}^\infty\frac{\Lambda(n)}{n^s}\zeta(s)=\sum_{n=1}^\infty\frac{\log(n)}{n^s}=-\zeta'(s)
+    \]
+    folgt.
+
+\end{enumerate}
+\end{example}

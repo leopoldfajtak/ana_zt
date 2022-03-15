@@ -1,0 +1,20 @@
+\prerequisite{multiplikativ}
+\prerequisite{konkrete_zf}
+\begin{proposition}
+    Ist $a$ vollst\"andig multiplikativ, so ist $a^{-1}(n)=a(n)\cdot\mu(n)$.
+\end{proposition}
+\begin{proof}
+Schreiben wir $b(n)=a(n)\cdot\mu(n)$.
+
+\begin{align*}
+(a*b)(n)=\sum_{d|n}a(d)\cdot a(\frac{n}{d})\cdot\mu(\frac{n}{d})
+= a(n)\sum_{d|n}\mu(\frac{d}{n})
+= \left\{\begin{array}{ll}
+    a(1)=1, &n=1\\
+    0, &n>1
+        \end{array}
+    \right.
+\end{align*}
+
+Daher ist $\inv{a}(m\cdot n)=\inv{a}(m)\inv{a}(n)$. $\Rightarrow\!\Leftarrow$
+\end{proof}

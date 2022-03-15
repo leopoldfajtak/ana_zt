@@ -1,0 +1,43 @@
+\prerequisite{zf_add_mult}
+\prerequisite{multiplikativ}
+\begin{theorem}
+\begin{enumerate}[(1)]
+    \item Sind die zahlentheoretischen Funktionen $a,b$ multiplikativ, so auch $a*b$.
+    \item Ist $a$ multiplikativ, so auch $a^{-1}$.
+    \end{enumerate}
+\end{theorem}
+\begin{remark}
+    Sind $a,b$ vollst\"andig multiplikativ, so ist i.a. $a*b$ bzw. $a^{-1}$ nicht mehr vollst\"andig multiplikativ, aber multiplikativ.
+\end{remark}
+\begin{proof}
+\begin{enumerate}[(1)]
+\item Angenommen $(m,n)=1$, $d|m\cdot n$. Dann gibt es eine eindeutige Faktorisierung $d=d_1\cdot d_2$ mit $d_1|m$, $d_2|n$. Aus der Eindeutigkeit folgt, dass $(d_1,d_2)=1$.
+Nun sind auch $\frac{m}{d_1},\frac{n}{d_2}$ teilerfremd, und mit der Multiplikativit\"at von $a$ folgt
+
+Betrachten wir
+\begin{align*}
+(a*b)(m\cdot n) &= \sum_{d|m\cdot n} a(d)\cdot b(\tfrac{m\cdot n}{d}) = \sum_{d_1|m}\sum_{d_2|n}a(d_1\cdot d_2)b(\tfrac{m}{d_1}\tfrac{n}{d_2})\\
+&= \sum_{d_1|m}\sum_{d_2|n}a(d_1)a(d_2)b(\tfrac{m}{d_1})b(\tfrac{n}{d_2})
+= \sum_{d_1|m}a(d_1)b(\tfrac{m}{d_1})\sum_{d_2|n}a(d_2)b(\tfrac{n}{d_2})\\
+&=(a*b)(m)\cdot(a*b)(n)
+\end{align*}
+
+\item Ist $a$ multiplikativ mit $a(1)\neq 0$ so muss $a(1)=a(1)^2=1$ sein. Insbesondere ist dann $\inv{a}(1)=\frac{1}{a(1)}=1$.
+
+Angenommen $\inv{a}$ ist nicht multiplikativ, also
+\[
+\exists m,n ~(m,n)=1, \inv{a}(m\cdot n)\neq\inv{a}(m)\cdot\inv{a}(n)
+\]
+Dann gibt es ein minimales Gegenbeispiel, in dem Sinne, dass
+\[
+\forall d_1|m~\forall d_2|n~(d_1,d_2)\neq(m,n)\Rightarrow\inv{a}(d_1\cdot d_2)=\inv{a}(d_1)\cdot\inv{a}(d_2)
+\]
+Mit der gleichen Rechnung wie oben erhalten wir
+\begin{align*}
+    0&=(a*\inv{a})(m\cdot n) \\
+&= \sum_{d_1|m}\sum_{d_2|n}a(d_1)a(d_2)\inv{a}(\frac{m}{d_1}\cdot\frac{n}{d_2}) + \inv{a}(m)\cdot\inv{a}(n)-\inv{a}(m)\cdot\inv{a}(n)\\
+&= (a*\inv{a})(m)\cdot(a*\inv{a})(n) + \inv{a}(m\cdot n) - \inv{a}(m)\inv{a}(n)\\
+&= 0 + \inv{a}(m\cdot n) - \inv{a}(m)\cdot\inv{a}(n)
+\end{align*}
+\end{enumerate}
+\end{proof}

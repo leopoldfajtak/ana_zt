@@ -1,0 +1,82 @@
+\documentclass[a4paper]{report} \setlength{\parindent}{0pt}
+\pdfpagewidth=\paperwidth
+\pdfpageheight=\paperheight
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage[naustrian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\setmainfont{EB Garamond}
+\usepackage[
+    backend=biber,
+    sortlocale=de_AT,
+    style=alphabetic]{biblatex}
+\addbibresource{~/dox/latex/uni.bib}
+
+
+$packages
+\usepackage{amsmath, amsfonts}
+\usepackage{amsthm, thmtools}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage[shortlabels]{enumitem}
+\usepackage{nameref, hyperref}
+\usepackage[capitalize]{cleveref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{proof}
+
+\newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\tup}[3]{\ensuremath{\left(#1_{#2}\right)_{#2\in#3}}}
+\newcommand{\NN}{\ensuremath{\mathbb{N}}}
+\newcommand{\MM}{\ensuremath{\mathbb{M}}}
+\newcommand{\VM}{\ensuremath{\mathbb{VM}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+\newcommand{\CC}{\ensuremath{\mathbb{C}}}
+\newcommand{\abs}[1]{\ensuremath{\left|#1\right|}}
+\renewcommand{\Re}{\ensuremath{\text{Re}}}
+\newcommand{\inv}[1]{\ensuremath{#1^{-1}}}
+
+\declaretheorem[numberwithin=section, name=Satz, style=plain, Refname={Satz, S\"atze}]{theorem}
+
+\declaretheorem[sibling=theorem, name=Definition, style=definition, Refname={Definition, Definitionen}]{definition}
+
+\declaretheorem[sibling=theorem, name=Proposition, Refname={Proposition, Propositionen}]{proposition}
+\declaretheorem[sibling=theorem, name=Lemma, Refname={Lemma, Lemmata}]{lemma}
+\declaretheorem[sibling=theorem, name=Korollar, Refname={Korollar, Korollare}]{kor}
+
+\declaretheorem[sibling=theorem, style=remark, name=Beispiel, Refname={Beispiel, Beispiele}]{example}
+\declaretheorem[sibling=theorem, style=remark, name=Bemerkung, Refname={Bemerkung, Bemerkungen}]{remark}
+
+\newlist{thmlist}{enumerate}{1}
+\setlist[thmlist]{label=(\alph{thmlisti}), ref=\thetheorem.(\alph{thmlisti}),noitemsep}
+
+\addtotheorempostheadhook[theorem]{\crefalias{thmlisti}{theorem}}
+\addtotheorempostheadhook[lemma]{\crefalias{thmlisti}{lemma}}
+
+\begin{document}
+\begin{titlepage}
+\centering
+{\scshape\LARGE Technische Universit\"at Wien \par}
+\vspace{1cm}
+{\scshape\large Mitschrift \par}
+\vspace{1.5cm}
+{\huge Analytische Zahlentheorie\par}
+\vspace{2cm}
+%{\large\itshape Leopold Fajtak \par}
+\vfill
+Mitschrift zur Vorlesung von\par
+Prof. Michael \textsc{Drmota}
+\vfill
+
+{\large\today\par}
+\end{titlepage}
+\todototoc
+\listoftodos
+\tableofcontents
+\newpage
+
+$content
+
+\newpage
+\printbibliography
+\end{document}

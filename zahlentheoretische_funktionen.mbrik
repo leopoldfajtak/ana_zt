@@ -1,0 +1,7 @@
+\begin{definition}
+    Eine Abbildung $a:\NN=\set{1,2,3,\dots}\rightarrow\CC$ heißt \emph{zahlentheoretische Funktion}. Jeder zahlentheoretische Funktion entspricht eine (formale) \emph{Dirichletsche Reihe}
+    \[
+    A(s) = \sum_{n=1}^\infty\frac{a(n)}{n^s}
+    \]
+\end{definition}
+
