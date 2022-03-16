@@ -39,5 +39,6 @@ Mit der gleichen Rechnung wie oben erhalten wir
 &= (a*\inv{a})(m)\cdot(a*\inv{a})(n) + \inv{a}(m\cdot n) - \inv{a}(m)\inv{a}(n)\\
 &= 0 + \inv{a}(m\cdot n) - \inv{a}(m)\cdot\inv{a}(n)
 \end{align*}
+Daher ist $\inv{a}(m\cdot n)=\inv{a}(m)\inv{a}(n)$. $\Rightarrow\!\Leftarrow$
 \end{enumerate}
 \end{proof}

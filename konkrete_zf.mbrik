@@ -1,4 +1,5 @@
 \prerequisite{zahlentheoretische_funktionen}
+\prerequisite{mult_thm}
 \begin{example}
 Wichtige konkrete zahlentheoretische Funktionen sind:
 
@@ -18,7 +19,7 @@ I(n)=S_{n1}=\left\{
 J(n):= 1\text{ f\"ur } n\geq 1\in\VM&&& 
     \sum_{n=1}^\infty\frac{J(n)}{n^s}=\sum_{n=1}^\infty\frac{1}{n^s}=:\zeta(s)
 \end{align*}
-ist die Riemannsche Zetafunktion
+ist die \emph{Riemannsche Zetafunktion}
 \item 
 \begin{align*}
 N_\alpha(n):=n^\alpha&&& 
@@ -53,23 +54,23 @@ Die Summe aller Teiler von $n$
     \end{array}\right.\in\MM \\
     \mu*J=I\text{, daher }\sum_{d|n}\mu(d)=I(n)\text{ und }\mu=\inv{J}\in\MM &&& \sum_{n=1}^\infty\frac{\mu(n)}{n^s}=\frac{1}{\zeta(s)}
 \end{align*}
-Die M\"obiussche My-Funktion. 
+Die \emph{M\"obiussche My-Funktion}.
 
 \item 
 \begin{align*}
 \varphi(n)=\#\set{k\mid 1\leq k\leq n, (k,n)=1}
 \end{align*}
-die Eulersche Phi-Funktion
+die Eulersche \emph{Phi-Funktion}.
 
 Es gilt $\varphi*J=N_1$, oder anders geschrieben $\sum_{d|n}\varphi(d)=n$:\\
 Betrachte
 
-\begin{tabular}{ll}
+\begin{tabular}{lll}
 $\frac{1}{n},\frac{2}{n},\dots,\frac{n}{n}$ & $n$ Zahlen\\
-\midrule
+\cmidrule{1-2}
 k\"urzen.\\
 Nenner = $n$ & $\varphi(n)$ Zahlen\\
-Nenner = $\frac{n}{d}$, $d|n$ & $\varphi(\frac{n}{d})$ Zahlen (Da $\#\set{1\leq k\leq n\mid (n,k)=d} =\#\set{1\leq l\leq\frac{n}{d}\mid (\frac{n}{d},l)=1} = \varphi(\frac{n}{d})$)
+Nenner = $\frac{n}{d}$, $d|n$ & $\varphi(\frac{n}{d})$ Zahlen &(Da $\#\set{1\leq k\leq n\mid (n,k)=d} =\#\set{1\leq l\leq\frac{n}{d}\mid (\frac{n}{d},l)=1} = \varphi(\frac{n}{d})$)
 \end{tabular}
 
 Also ist $\sum_{d|n}\varphi(\frac{n}{d})=n$.
@@ -88,7 +89,7 @@ $\varphi(n)=\sum_{d|n}d\cdot\mu(\frac{n}{d})=\sum_{d|n}\frac{n}{d}\mu(d) = n\sum
         (-1)^{k_1+\dots+k_l} &n=p_1^{k_1}\dots p_l^{k_l}
     \end{array}\right.\in\VM
 \end{align*}
-Die Liouvillesche Lambda-Funktion. Es ist
+Die \emph{Liouvillesche Lambda-Funktion}. Es ist
 $\inv{\lambda}(n)=\lambda(n)\cdot\mu(n)=\mu(n)^2=|\mu(n)|$
 
 und $(\lambda*J)(p^k)=\sum_{d|p^k}\lambda(d)=1+\sum_{l=1}^k(-1)^l=(l+1)(2)$.
@@ -110,7 +111,7 @@ Durch die Multiplikativit\"at von $(\lambda*J)$ folgt
         0 &\text{sonst}
     \end{array}\right. 
 \end{align*}
-Die Von-Mangoldtsche Lambda-Funktion
+Die \emph{Von-Mangoldtsche Lambda-Funktion}.
 
 Es ist $(\lambda*J)(p_1^{k_1}\dots p_l^{k_l})=\sum_{i=1}^l\sum_{j=1}^{k_i}\log p_i=\sum_{j=1}^l\log p_i^{k_i}=\log(p_1^{k_1}\dots p_l^{k_l})$, also $(\lambda*J)=\log$,
 woraus 

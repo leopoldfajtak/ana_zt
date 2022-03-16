@@ -13,8 +13,7 @@ Schreiben wir $b(n)=a(n)\cdot\mu(n)$.
     a(1)=1, &n=1\\
     0, &n>1
         \end{array}
-    \right.
+    \right\}=I(n)
 \end{align*}
 
-Daher ist $\inv{a}(m\cdot n)=\inv{a}(m)\inv{a}(n)$. $\Rightarrow\!\Leftarrow$
 \end{proof}

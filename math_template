@@ -6,7 +6,12 @@
 \usepackage[naustrian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{fontspec}
-\setmainfont{EB Garamond}
+\usepackage{amsmath, amsfonts}
+\usepackage{amsthm, thmtools}
+\usepackage{amssymb}
+\usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
+\setmainfont{EB Garamond}%[Numbers={Lining, Proportional},RawFeature={+ss06}]{EB Garamond}
+\setmathfont{Garamond-Math.otf}[StylisticSet={7,9,10}]
 \usepackage[
     backend=biber,
     sortlocale=de_AT,
@@ -15,15 +20,13 @@
 
 
 $packages
-\usepackage{amsmath, amsfonts}
-\usepackage{amsthm, thmtools}
-\usepackage{amssymb}
 \usepackage{booktabs}
 \usepackage[shortlabels]{enumitem}
 \usepackage{nameref, hyperref}
 \usepackage[capitalize]{cleveref}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{proof}
+\usepackage{csquotes}
 
 \newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
 \newcommand{\tup}[3]{\ensuremath{\left(#1_{#2}\right)_{#2\in#3}}}
@@ -54,26 +57,6 @@ $packages
 \addtotheorempostheadhook[lemma]{\crefalias{thmlisti}{lemma}}
 
 \begin{document}
-\begin{titlepage}
-\centering
-{\scshape\LARGE Technische Universit\"at Wien \par}
-\vspace{1cm}
-{\scshape\large Mitschrift \par}
-\vspace{1.5cm}
-{\huge Analytische Zahlentheorie\par}
-\vspace{2cm}
-%{\large\itshape Leopold Fajtak \par}
-\vfill
-Mitschrift zur Vorlesung von\par
-Prof. Michael \textsc{Drmota}
-\vfill
-
-{\large\today\par}
-\end{titlepage}
-\todototoc
-\listoftodos
-\tableofcontents
-\newpage
 
 $content
 

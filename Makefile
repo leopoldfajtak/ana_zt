@@ -1,8 +1,8 @@
 .PHONY: all
 all: mitschrift.pdf
 
-mitschrift.tex: *.brik *.mbrik math_template
-	texbrix --template math_template mitschrift.brik
+%.tex: *.brik *.mbrik math_template
+	texbrix --template math_template $(basename $@).brik
 
 %.pdf: %.tex
 	xelatex $<
