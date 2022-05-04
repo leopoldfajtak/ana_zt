@@ -1,0 +1,32 @@
+\prerequisite{analytisch}
+\begin{theorem}
+Folgende drei Eigenschaften sind äquivalent:
+\begin{enumerate}[1.]
+    \item $f: G\to \CC$ ist analytisch
+    \item $f: G\to \CC$ ist komplex stetig differenzierbar
+    \item Für alle $z_0\in G$ und alle geschlossenen Kurven $\gamma$, die $z_0$ einfach im mathematisch positiver Richtung umrunden (deren Windungszahl $1$ ist), gilt
+    \[
+    f(z_0)=\frac{1}{2\pi i}\int_\gamma\frac{f(z)}{z_0-z}\dd z
+    \]
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+.
+\todo{Vollst\"andiger Beweis aus Kana, danach die nachfolgende Bemerkung noch einmal überprüfen}
+\end{proof}
+\begin{remark}
+    Aus dem Beweis folgt, f\"ur $f(z)=\sum_{n=0}^\infty a_n(z-z_0)^n$, die \emph{Cauchy'sche Formel}
+    \[
+    a_n=\int_\gamma\frac{f(z)}{(z-(z_0))^{n-1}}\dd z
+    \]
+    In gewisser Weise lassen sich holomorphe Funktionen also "durch Integrieren differenzieren".
+\end{remark}
+\begin{remark}
+    Die dritte Bschreibung analytischer Funktionen im vorherigen Satz liefert direkt
+\end{remark}
+\begin{theorem}\label{thm_lim_analytisch}
+    Sind die Funktionen $f_k:G\to\CC$ gleichmäßig konvergent auf kompakten Mengen $K\subseteq G$ und alle analytisch, so ist der punktweise Grenzwert $f:=\lim_{k\to\infty}f_k$ ebenfalls analytisch.
+\end{theorem}
+\begin{example}
+    Die Zetafunktion $\zeta$ ist auf $\Re(s)>1$ analytisch.
+\end{example}

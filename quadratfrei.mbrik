@@ -2,7 +2,7 @@
 \begin{example}
 Um eine Ann\"aherung des Verh\"altnisses quadratfreier zu nicht quadratfreien Zahlen kleiner als $x$ zu erhalten, bezeichen $Q(x)$ die Anzahl aller quadratfreien Zahlen $n\leq x$.
 $Q(x)=\sum_{n\leq x}|\mu(n)|=\sum_{n\leq x}\sum_{d^2|n}\mu(d)$
-Nun ist $|\mu|=\inv{\lambda}$, also multiplikativ. Auch $c(n):=\sum_{d^2|n}\mu(d)$ ist multiplikativ, da $d^2|nm$ eine eindeutige Zerlegung in $d=d_1d_2$ mit $d_1^2|n$ und $d_2^2|m$ hat. Nun ist
+Die Funktion $|\mu|=\inv{\lambda}$, ist multiplikativ. Auch $c(n):=\sum_{d^2|n}\mu(d)$ ist multiplikativ, da $d^2|nm$ eine eindeutige Zerlegung in $d=d_1d_2$ mit $d_1^2|n$ und $d_2^2|m$ hat, wenn $\ggT{n}{m}=1$. Nun ist
 \[
     c(p^k)=\left\{\begin{array}{ll}\mu(1)=1 & k=1\\\mu(1)+\mu(p)=0 & k\geq 2\end{array}\right\}=|\mu(p^k)|,
 \]
@@ -10,7 +10,7 @@ also ist $c=|\mu|$ und
 
 \begin{align*}
     Q(x) &= \sum_{n\leq x}\sum_{d^2|n}\mu(d)\\
-    &=\sum_{\substack{(d,m)\\d^2m\leq x}}\mu(d) = \sum_{d\leq\sqrt{x}}\mu(d)\left\lfloor\tfrac{x}{d^2}\right\rfloor\\
+    &=\sum_{\substack{\ggT{d}{m}\\d^2m\leq x}}\mu(d) = \sum_{d\leq\sqrt{x}}\mu(d)\left\lfloor\tfrac{x}{d^2}\right\rfloor\\
     &=\sum_{d\leq\sqrt{x}}\mu(d)\left(\tfrac{x}{d^2}+\mathcal{O}(1)\right)\\
     &=x\!\sum_{d\leq\sqrt{x}}\frac{\mu(d)}{d^2}+\mathcal{O}(\sqrt{x})\\
     &=x\cdot\frac{1}{\zeta(2)}-x\!\sum_{d>\sqrt{x}}\frac{\mu(d)}{d^2}+\mathcal{O}(\sqrt{x})

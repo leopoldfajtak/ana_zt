@@ -1,0 +1,64 @@
+\prerequisite{partielle_summation}
+\prerequisite{eulerprodukt}
+\begin{theorem}\label{thm_dirichlet_konv}
+    Konvergiert die Dirichletreihe $A(s)=\sum_{n=1}^\infty\frac{a(n)}{n^s}$ an einem Punkt $s_0$, so konvergiert sie am gesamten Gebiet $G=\set{s\mid\Re(s)>\Re(s_0)}$ und ist darauf analytisch.
+\end{theorem}
+\begin{proof}
+Mit partieller Summation ist
+\[
+    \sum_{n=N}^M\frac{a_n}{n^s}=\sum_{n=N}^M\frac{a_n}{n^{s_0}}\frac{1}{n^{s-s_0}}=\sum_{n=N}^M\frac{a_n}{n^{s_0}}\frac{1}{M^{s-s_0}} + \int_N^M\frac{s-s_0}{t^{s-s_0+1}}\cdot\sum_{n\leq k\leq t}\frac{a_k}{k^{s_0}}\dd t.
+\]
+Für ausreichend großes $N$ sind $\abs{\sum_{n=N}^M\frac{a_n}{n^{s_0}}}$ und $\abs{\sum_{N\leq k\leq t}\frac{a_k}{k^{s_0}}}$ kleiner als $\varepsilon$ und
+\begin{align*}
+    \abs{\sum_{n=N}^M\frac{a_n}{n^s}}&<\frac{\varepsilon}{N^{\Re(s-s_0)}}+\varepsilon\int_N^M\frac{\abs{s-s_0}}{t^{\Re(s-s_0+1)}}\dd t\\
+    &=\frac{\varepsilon}{M^{\Re(s-s_0)}}+\varepsilon\frac{\abs{s-s_0}}{\Re(s-s_0)}\abs{\frac{1}{M^{\Re(s-s_0)}}-\frac{1}{N^{\Re(s-s_0)}}}<\varepsilon
+\end{align*}
+
+Um zu ziegen, dass die Reihe auf Kompakta gleichmäßig konvergiert, sei $K$ kompakt, und $d=d(K,\set{z\mid\Re(z)=1})>0$. Dann ist $\Re(s-s_0)\geq d$ und f\"ur $s\in K$ ist
+\[
+    \abs{\sum_{n=N}^M\frac{a_n}{n^s}}<\frac{\varepsilon}{M^d}+\varepsilon\left(\frac{1}{M^d}+\frac{1}{N^d}\right)<\varepsilon,
+\]
+wobei nun $N$ unabhängig von $s$ gewählt werden kann.
+
+Nach Satz \cref{thm_lim_analytisch} ist der Grenzwert analytisch.
+
+\end{proof}
+\begin{remark}
+    Unter den Voraussetzungen von \cref{thm_dirichlet_konv} konvergiert $A(s)$ am Gebiet $\set{s\mid\Re(s)>\Re(s_0)+1}$ absolut.
+    Für $s>\Re(s_0)+1$ ist nämlich
+    \[
+    \abs{\frac{a(n)}{s^n}}=\abs{\frac{a(n)}{n^{s_0}}}\cdot\abs{\frac{1}{n^{s-s_0}}}\leq C\cdot\frac{1}{n^{1+\varepsilon}}
+    \]
+    Das ist wichtig, wenn mit multiplikativem (also durch die Werte auf Primzahlpotenzen bestimmtem) $a$ ist
+    \[
+    \sum_{p\in\PP}\abs{\sum_{k\geq 1}\frac{a(p^k)}{p^{ks}}}
+    \leq\sum_{p\in\PP}\sum_{k\geq 1}\abs{\frac{a(p^k)}{p^ks}}
+    \leq\sum_{n\geq 1}\abs{\frac{a(n)}{n^s}}<\infty,
+    \]
+    also konvergiert das Eulerprodukt
+    \[
+    \prod_{p\in\PP}\left(1+\frac{a(p)}{p^2}+\frac{a(p^2}{p^{2s}}+\dots\right),
+    \]
+    wobei
+    \[
+    \prod_{\substack{p\in\PP\\p\leq N}}\left(1+\frac{a(p)}{p^2}+\frac{a(p^2}{p^{2s}}+\dots\right)
+    = \sum_{n=1}^N\frac{a(n)}{n^s} + \sum_{\substack{n>N\\\textnormal{für alle Primteiler } p\textnormal{ von }n\\p\leq N
+    }}\frac{a(n)}{n^s} \to_{N\to\infty} A(s),
+    \]
+    da $\sum_{n=1}^N\frac{a(n)}{n^s} + \sum_{\substack{n>N\\\textnormal{für alle Primteiler } p\textnormal{ von }n\\p\leq N}}\frac{a(n)}{n^s}\leq\sum_{n>N}\abs{\frac{a(n)}{n^s}}\to0$.
+    Also ist
+    \[
+    \prod_{p\in\PP}\left(1+\frac{a(p)}{p^2}+\frac{a(p^2}{p^{2s}}+\dots\right) = \sum_{n=1}^\infty\frac{a(n)}{n^s}
+    \]
+    und insbesondere, falls $a(n)$ vollständig multiplikativ ist (also $a(p^k)=a(p)^k$)
+    \[
+    \sum_{n=1}^\infty\frac{a(n)}{n^s} = \prod_{p\in\PP}\frac{1}{1-\frac{a(p)}{p^s}}     
+    \]
+\end{remark}
+\begin{example}
+    \[
+    \zeta(s)=\prod_{p\in\PP}\frac{1}{1-\frac{1}{p^s}}
+    \]
+    Eine Folgerung daraus ist, dass $\sum_{p\in\PP}\frac{1}{p}=\infty$, da sonst $\lim_{s\to 1}\zeta(s)$ existieren würde.
+\end{example}
+

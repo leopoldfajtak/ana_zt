@@ -1,0 +1,7 @@
+\begin{definition}
+    Sei $G\subseteq\CC$ ein zusammenhängendes Gebiet. Eine Funktion $f:G\to\CC$ heißt \emph{analytisch}, wenn sie in jedem Punkt (lokal) in eine Potenzreihe entwickelbar ist, d.h. für alle $z\in G$ gibt es ein $r>0$ und $a_n\in\CC$ mit $f(z)=\sum_{n=0}^\infty a_n(z-z_0)^n$.\\
+    Eine Funktion $f:G\to\CC$ heißt \emph{komplex differenzierbar in} $z_0\in G$, wenn der Grenzwert $f'(z_0)=\lim_{z\to z_0}\frac{f(z)-f(z_0)}{z-z_0}$ existiert. Ist dies f\"ur alle $z_0\in G$ der Fall, (und ist die Zuordnung $z_0\to f'(z_0)$ stetig), so heißt $f$ \emph{(stetig) komplex differenzierbar}.
+\end{definition}
+\begin{remark}
+    Eine Funktion $f=u+iv$ ist in $z$ komplex differenzierber genau dann, wenn sie in $z$ die \emph{Cauchy-Riemannschen Differentialgleichungen} $u_x=v_y, u_y=-v_x$ erfüllt.
+\end{remark}

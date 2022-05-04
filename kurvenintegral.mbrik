@@ -1,0 +1,34 @@
+\begin{definition}
+    Sei $\gamma: [0,1]\to\CC$ eine st\"uckweise glatte Kurve, und $f:\CC\to\CC$. Dann bezeichnet 
+    \[
+    \int_\gamma f(z)\dd z:=\int_0^1f\circ\gamma(t)\cdot\gamma'(t)\dd t
+    \]
+    das komplexe Kurvenintegral von $f$ \"uber $\gamma$.
+\end{definition}
+\begin{remark}
+Zur Notation reeller Kurvenintegrale
+\begin{align*}
+    &\int_\gamma\left(\begin{array}{l}f_1(x,y)\\f_2(x,y)\end{array}\right)\dd\left(\begin{array}{l}x\\y\end{array}\right)
+    :=\int_0^1\left(\begin{array}{l}
+        f_1(\gamma_1(t),\gamma_2(t))\\
+        f_2(\gamma_1(t),\gamma_2(t))
+    \end{array}\right)\cdot
+    \left(\begin{array}{l}
+        \gamma_1'(t)\\
+        \gamma_2'(t)
+    \end{array}\right)\dd t\\
+    %
+    =&\int_0^1f_1(\gamma_1(t),\gamma_2(t))\gamma_1'(t) + f_2(\gamma_1(t),\gamma_2(t))\gamma_2'(t)\dd t\\
+    =:&\int_\gamma(f_1\dd x + f_2\dd y)
+\end{align*}
+mit der Substitution $x=\gamma_1(t), y=\gamma_2(t)$.
+\end{remark}
+\begin{remark}
+    Ausmultiplizieren ergibt f\"ur $f=u+iv$, dass 
+    \[
+    \int_\gamma f(z)\dd z = \int_\gamma(u+iv)(\dd x+i\dd y)
+    = \int_\gamma(u\dd x - v\dd y)+i\int_\gamma(v\dd x+u\dd y)
+    \]
+    Ist $f$ komplex differenzierbar, ist also aufgrund der Cauchy-Riemannschen Differentialgleichungen $\int_\gamma f$ weginvariant.
+    Es folgt weiter, dass falls $G$ einfach zusammenh\"angend, $f$ in $G$ \"uberall komplex differenzierbar, und $z_0\in G$, $F(z):=\int_{z_0\to z} f(w)\dd w$ wohldefiniert ist. ($\gamma\to z$ bezeichnet hier einen beliebigen Weg von $z_0$ nach $z$ in $G$). Außerdem ist $F$ komplex differenzierbar mit $F'(z)=f(z)$.
+\end{remark}

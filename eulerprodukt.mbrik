@@ -1,0 +1,4 @@
+\begin{remark}
+Falls $\sum_{k\geq 1}\abs{a_k}<\infty$, dann konvergiert das \emph{Eulerprodukt} $\prod(1+a_k)$ absolut mit $\prod_{k\geq 1}(1+a_k)\neq 0$, dalls alle $a_k\neq-1$.
+Das folgt daraus, dass, falls alle $a_k > -1$ $\lim_{N\to\infty}\log\left(\prod_{1\leq k\leq N}(1+a_k)\right)=\lim_{N\to\infty}\sum_{1\leq k\leq N}\log(1+a_k)\leq\sum_{n\geq 1}\abs{a_k}$
+\end{remark}

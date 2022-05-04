@@ -1,0 +1,36 @@
+\prerequisite{zahlentheoretische_funktion}
+\begin{definition}
+    Eine zahlentheoretische Funktion $\chi$ heißt \emph{Dirichlet-Charakter}
+    modulo $k$ (D-Char.), falls folgende Eigenschaften gelten:
+    \begin{enumerate}[1.]\itemsep0pt
+        \item $\chi(a\cdot b)=\chi(a)\cdot\chi(b)$ für alle $a,b\geq 1$,
+        \item $\abs{\chi(a)}=1$ für $\ggT{a}{k}=1$,
+        \item $\chi(a)=\chi(b)$ für $a\ismod{b}{k}$,
+        \item $\chi(a)=0$ für $\ggT{a}{k}>1$.
+    \end{enumerate}
+\end{definition}
+\begin{remark}
+    Für einen Dirichlet-Charakter $\chi$ gilt $\chi\in\VM$.
+\end{remark}
+\begin{remark}
+    Es sei $E_k$ die multiplikative Gruppe der $\varphi(k)$ zu $k$ teilerfremden Restklassen modulo $k$. Dann korrespondiert ein Dirichlet-Charakter ismod $k$ $\chi$ genau zu einem Homomorphismus $\chi^*: E_k\to\CC\Minus\set{0}$.
+    Allgemein heiẞt ein solcher Homomorphismus \emph{Charakter} einer Gruppe.
+\end{remark}
+\begin{remark}
+    Sei $\ggT{a}{k}=1$. Dann gilt $a^{\varphi(k)}\ismod{1}{k}$ und daher auch $\chi(a)^{\varphi(k)}=1$. Der Wertebereich eines Dirichlet-Charakters umfasst daher $0$ und die $\varphi(k)$-ten Einheitswurzeln.
+\end{remark}
+\begin{remark}
+    Ist der Wertebereich nur $0$ und $1$, so heißt $\chi$ auch \emph{Hauptcharakter} und wird oft mit $\chi_0$ bezeichnet. Weiters gibt es reelle Dirichlet-Charaktere, d.h. der Wertebereich ist $0, 1$ und $-1$, und nat\"urlich auch komplexwertige Dirichlet-Charaktere.
+\end{remark}
+\begin{lemma}
+    Ist $b\isnotmod{1}{k}$, so existiert ein Dirichlet-Charakter $\chi$ modulo $k$ mit $\chi(b)\neq 1$.
+\end{lemma}
+\begin{theorem}
+    Durchläuft $a$ ein volles Restsystem modulo $k$ (z.B: $a=1,2,\dots, k$),so ist
+    \[
+    \sum_{a\mod k}\chi(a)=\left\{\begin{array}{ll}
+    \varphi(k) &\text{für } a\ismod{1}{k}\\
+    0 &\text{für } a\isnotmod{1}{k}
+    \end{array}\right.
+    \]
+\end{theorem}

@@ -1,0 +1,20 @@
+\begin{definition}
+    Ist $g(z_0)\neq 0$ und $f(z)=(z-z_0)g(z)$, so ist $z_0$ eine \emph{Nullstelle erster Ordnung} von $f$.
+    Ist $z_0$ eine Nullstelle $(k-1)$-ter Ordnung von $g$ und $f(z)=(z-z_0)g(z)$, so ist $z_0$ eine 
+    \emph{Nullstelle $k$-ter Ordnung} von $f$.
+\end{definition}
+\begin{definition}
+    Ist $f:G\Minus\set{z_0}$ analytisch, und $k$ minimal, sodass $g(z):=f(z)(z-z_0)^k$ eine analytische Fortsetzung $\sum_n=0^\infty b_k(z-z_0)^n$ auf $G$ hat, so hat $f$ in $z_0$ einen \emph{Pol $k$-ter Ordnung} und entspricht der Laurentreihe $\frac{1}{(z-z_0^k)}(b_0+b_1(z-z_0)+b_2(z-z_0)^1+\dots)$.
+    Wir nennen $b_{k-1}:=\res(f,z_0)$ das \emph{Residuum} von $f$ an $z_0$.
+\end{definition}
+\begin{remark}
+    Ist $\gamma$ ein Weg in $G$ um $z_0$ mit Windungszahl $1$, so ist
+    \begin{align*}
+    \int_\gamma f(z)&=\int_\gamma\frac{b_0}{(z-z_0)^k} + \dots +\frac{b_{k-2}}{(z-z_0)^2}\dd z + \int_\gamma b_k\frac{1}{z-z_0}\dd z + \int_\gamma\sum_{n=0}^\infty b_{k+n}(z-z_0)^n\dd z\\
+    &=2\pi\res(f,z_0)
+    \end{align*}
+    da der erste und der letzte Summand verschwindet.
+\end{remark}
+\begin{theorem}[Residuensatz]
+    Sind $z_1,\dots z_r$ Polstellen von $f:G\Minus\set{z_1,\dots,z_r}\to\CC$, und umkreis $\gamma$ jeden Punkt $z_j$ genau einmal, so ist $\int_\gamma f(z)\dd z=2\pi i\sum_{j=1}^r\res(f,z_j)$.
+\end{theorem}

@@ -11,7 +11,7 @@
 \end{remark}
 \begin{proof}
 \begin{enumerate}[(1)]
-\item Angenommen $(m,n)=1$, $d|m\cdot n$. Dann gibt es eine eindeutige Faktorisierung $d=d_1\cdot d_2$ mit $d_1|m$, $d_2|n$. Aus der Eindeutigkeit folgt, dass $(d_1,d_2)=1$.
+\item Angenommen $\ggT{m}{n}=1$, $d|m\cdot n$. Dann gibt es eine eindeutige Faktorisierung $d=d_1\cdot d_2$ mit $d_1|m$, $d_2|n$. Aus der Eindeutigkeit folgt, dass $(d_1,d_2)=1$.
 Nun sind auch $\frac{m}{d_1},\frac{n}{d_2}$ teilerfremd, und mit der Multiplikativit\"at von $a$ folgt
 
 Betrachten wir
@@ -26,7 +26,7 @@ Betrachten wir
 
 Angenommen $\inv{a}$ ist nicht multiplikativ, also
 \[
-\exists m,n ~(m,n)=1, \inv{a}(m\cdot n)\neq\inv{a}(m)\cdot\inv{a}(n)
+\exists m,n ~\ggT{m}{n}=1, \inv{a}(m\cdot n)\neq\inv{a}(m)\cdot\inv{a}(n)
 \]
 Dann gibt es ein minimales Gegenbeispiel, in dem Sinne, dass
 \[

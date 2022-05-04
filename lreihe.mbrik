@@ -1,0 +1,38 @@
+\prerequisite{dirichletcharakter}
+\begin{definition}
+    Sei $\chi$ ein Dirichlet-Charakter. So bezeichnet man die dazugehörige Dirichletsche Reihe
+    \[
+    L(s,\chi)=\sum_{n=1}^\infty\frac{\chi(n)}{n^s}
+    \]
+    als \emph{Dirichletsche L-Reihe}.
+\end{definition}
+\begin{theorem}
+    Bezeichnet man mit $\zeta(s,a)=\sum_{n=1}^\infty\frac{1}{(n+a)^s} (0<a\leq 1)$ die \emph{Hurwitzsche Zetafunktion}, so gilt
+    \[
+    L(s,\chi)=k^{-1}\cdot\sum_{n=1}^k\chi(a)\zeta(s,\frac{a}{k}).
+    \]
+    F\"ur den Hauptcharakter gilt auch
+    \[
+    L(s,\chi_0)=\zeta(s)\cdot\prod_{p|k}\left(1-\frac{1}{p^s}\right).
+    \]
+\end{theorem}
+\begin{lemma}[Ortogonalitätsrelation für Dirichlet-Charaktere]
+\[
+    \sum_{a=1}^k\chi_1(a)\cdot\conj{\chi_2(a)}=\left\{\begin{array}{ll}
+    \varphi(k) &\text{f\"ur } \chi_1=\chi_2\\
+    0 &\text{f\"ur } \chi_1\neq\chi_2
+    \end{array}\right.
+\]
+\[
+    \sum_{\chi\mod k}\chi(a_1)\cdot\conj{\chi(a_2)}=\left\{\begin{array}{ll}
+    \varphi(k) &\text{wenn } a_1\mod{a_2}{k}\text{ und } (a_1,k)=(a_2,k)=1 \\
+    0 &\text{sonst}
+    \end{array}\right.
+\]
+\end{lemma}
+\begin{theorem}
+    Ist $n_1<n_2<\dots$ eine Folge natürlicher Zahlen und $f$ eine zahlentheoretische Funktion, so ist f\"ur $\ggT{a}{k}=1$
+    \[
+    \sum_{\substack{j\leq J\\n_k\ismod{a}{k}}}f(n_j)=\frac{1}{\varphi(k)}\cdot\sum_{\chi\mod k}\conj{\chi(a)}\cdot\sum_{j\leq J}f(n_j)\chi(n_j)
+    \]
+\end{theorem}

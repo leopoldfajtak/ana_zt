@@ -5,10 +5,11 @@
 \usepackage{graphicx}
 \usepackage[naustrian]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{fontspec}
 \usepackage{amsmath, amsfonts}
 \usepackage{amsthm, thmtools}
 \usepackage{amssymb}
+% the lines below don't work with pdflatex.
+\usepackage{fontspec}
 \usepackage[math-style=ISO, bold-style=ISO]{unicode-math}
 \setmainfont{EB Garamond}%[Numbers={Lining, Proportional},RawFeature={+ss06}]{EB Garamond}
 \setmathfont{Garamond-Math.otf}[StylisticSet={7,9,10}]
@@ -16,7 +17,7 @@
     backend=biber,
     sortlocale=de_AT,
     style=alphabetic]{biblatex}
-\addbibresource{~/dox/latex/uni.bib}
+%\addbibresource{~/dox/latex/uni.bib}
 
 
 $packages
@@ -28,6 +29,7 @@ $packages
 \usepackage{proof}
 \usepackage{csquotes}
 
+\newcommand{\dd}{\, \mathrm{d}}
 \newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
 \newcommand{\tup}[3]{\ensuremath{\left(#1_{#2}\right)_{#2\in#3}}}
 \newcommand{\NN}{\ensuremath{\mathbb{N}}}
@@ -36,8 +38,13 @@ $packages
 \newcommand{\PP}{\ensuremath{\mathbb{P}}}
 \newcommand{\CC}{\ensuremath{\mathbb{C}}}
 \newcommand{\abs}[1]{\ensuremath{\left|#1\right|}}
-\renewcommand{\Re}{\ensuremath{\text{Re}}}
 \newcommand{\inv}[1]{\ensuremath{#1^{-1}}}
+\newcommand{\Minus}[1]{\ensuremath{\backslash\!#1}}
+\newcommand{\ismod}[2]{\ensuremath{\equiv #1~(#2)}}
+\newcommand{\isnotmod}[2]{\ensuremath{\not\equiv #1~(#2)}}
+\newcommand{\conj}[1]{\ensuremath{\overline{#1}}}
+\newcommand{\ggT}[2]{\ensuremath{\left(#1,#2\right)}}
+\newcommand{\res}{\ensuremath{\textnormal{res}}}
 
 \declaretheorem[numberwithin=section, name=Satz, style=plain, Refname={Satz, S\"atze}]{theorem}
 

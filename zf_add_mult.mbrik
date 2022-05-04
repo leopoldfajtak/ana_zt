@@ -1,4 +1,4 @@
-\prerequisite{zahlentheoretische_funktionen}
+\prerequisite{zahlentheoretische_funktion}
 \begin{definition}
     Durch $c(n)=(a+b)(n)=a(n)+b(n)$ wird die \emph{Summe} zweier zahlentheoretischer Funktionen definiert. Ihr entspricht die Dirichletsche Reihe
     \[

@@ -1,4 +1,4 @@
-\prerequisite{zahlentheoretische_funktionen}
+\prerequisite{zahlentheoretische_funktion}
 \prerequisite{mult_thm}
 \begin{example}
 Wichtige konkrete zahlentheoretische Funktionen sind:
@@ -58,7 +58,7 @@ Die \emph{M\"obiussche My-Funktion}.
 
 \item 
 \begin{align*}
-\varphi(n)=\#\set{k\mid 1\leq k\leq n, (k,n)=1}
+\varphi(n)=\#\set{k\mid 1\leq k\leq n, \ggT{k}{n}=1}
 \end{align*}
 die Eulersche \emph{Phi-Funktion}.
 
@@ -70,7 +70,7 @@ $\frac{1}{n},\frac{2}{n},\dots,\frac{n}{n}$ & $n$ Zahlen\\
 \cmidrule{1-2}
 k\"urzen.\\
 Nenner = $n$ & $\varphi(n)$ Zahlen\\
-Nenner = $\frac{n}{d}$, $d|n$ & $\varphi(\frac{n}{d})$ Zahlen &(Da $\#\set{1\leq k\leq n\mid (n,k)=d} =\#\set{1\leq l\leq\frac{n}{d}\mid (\frac{n}{d},l)=1} = \varphi(\frac{n}{d})$)
+Nenner = $\frac{n}{d}$, $d|n$ & $\varphi(\frac{n}{d})$ Zahlen &(Da $\#\set{1\leq k\leq n\mid \ggT{n}{k}=d} =\#\set{1\leq l\leq\frac{n}{d}\mid (\frac{n}{d},l)=1} = \varphi(\frac{n}{d})$)
 \end{tabular}
 
 Also ist $\sum_{d|n}\varphi(\frac{n}{d})=n$.
@@ -92,7 +92,7 @@ $\varphi(n)=\sum_{d|n}d\cdot\mu(\frac{n}{d})=\sum_{d|n}\frac{n}{d}\mu(d) = n\sum
 Die \emph{Liouvillesche Lambda-Funktion}. Es ist
 $\inv{\lambda}(n)=\lambda(n)\cdot\mu(n)=\mu(n)^2=|\mu(n)|$
 
-und $(\lambda*J)(p^k)=\sum_{d|p^k}\lambda(d)=1+\sum_{l=1}^k(-1)^l=(l+1)(2)$.
+und $(\lambda*J)(p^k)=\sum_{d|p^k}\lambda(d)=1+\sum_{l=1}^k(-1)^l\equiv(l+1)(2)$.
 
 Durch die Multiplikativit\"at von $(\lambda*J)$ folgt
 \begin{align*}

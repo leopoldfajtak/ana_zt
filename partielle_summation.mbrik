@@ -1,0 +1,25 @@
+\begin{proposition}[Partielle Summation]
+\begin{enumerate}[(i)]
+Ähnlich wie partielle Integration für Integrale gilt für Summen
+    \item
+    \[
+    \sum_{n=1}^N a_n\cdot b_n = \sum_{n=1}^N a_n\cdot b_N - \sum_{n=1}^{N-1}(b_{n+1}-b_n)\cdot\sum_{k=1}^n a_k
+    \]
+    \item
+    Ist $g$ differenzierbar gilt
+    \[
+    \sum_{n=1}^N a_ng(n)=\sum_{n=1}^Na_n\cdot g(N)-\int_1^Ng'(t)\cdot\sum_{1\leq k\leq t}a_k\dd t
+    \]
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+    \begin{itemize}[(i)]
+        \item Vollständige Induktion. Der Fall $n=1$ ist klar. Für den Induktionsschritt schreibe $a_{N+1}\cdot b_{N+1}=\sum_{n=1}^{N+1}a_n\cdot b_{N+1} - \sum_{n=1}^Na_n\cdot b_{N+1}$:
+        \begin{align*}
+    \sum_{n=1}^{N+1}a_n\cdot b_n&=a_{N+1}\cdot b_{N+1} + \sum_{n=1}^N a_n\cdot b_N - \sum_{n=1}^{N-1}(b_{n+1}-b_n)\cdot\sum_{k=1}^n a_k \\
+    &=\sum_{n=1}^{N+1}a_n\cdot b_{N+1} - (b_{N+1}-b_{N})\sum_{n=1}^Na_n - \sum_{n=1}^{N-1}(b_{n+1}-b_n)\cdot\sum_{k=1}^n a_k
+        \end{align*}
+        \item Aufspalten des Integrals auf Intervalle der L\"ange $1$ ergibt $\sum_{n=1}^{N-1}\sum_{1\leq k\leq n}a_k\int_n^{n+1}g'(t)\dd t=\sum_{n=1}^{N-1}\sum_{1\leq k\leq n}a_k\cdot(g(n+1)-g(n))$. Dies ist die Form des ersten Teils.
+    \end{itemize}
+\end{proof}
+

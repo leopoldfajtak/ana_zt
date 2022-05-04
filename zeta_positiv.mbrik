@@ -1,0 +1,7 @@
+\prerequisite{konkrete_zf}
+\begin{remark}
+    Ist $\Re(s)>1$, so ist $\zeta(s)\neq 0$, da
+    \[
+        \abs{\frac{1}{\zeta(s)}}\leq\sum_{n=1}^\infty\frac{\lambda^{-1}(n)}{\abs{n^s}}=\frac{1}{\zeta(2\cdot\Re(s))}<\frac{1}{\int_1^\infty\tfrac{1}{x^{\Re(s)}}\dd x}=\frac{1}{\Re(s)-1}
+    \]
+\end{remark}
